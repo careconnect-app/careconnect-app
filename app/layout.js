@@ -1,5 +1,4 @@
 // import { Toaster } from "react-hot-toast";
-import { Inter } from "next/font/google";
 // import { Providers } from "@/redux/provider";
 import Navbar from "@/components/Navbar/Navbar";
 // import NextTopLoader from "nextjs-toploader";
@@ -7,7 +6,6 @@ import "@/app/globals.scss";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import MainView from "@/components/Main/Main.View";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "care connect",
@@ -31,7 +29,9 @@ export default function RootLayout({ children }) {
         /> */}
         {/* <Providers> */}
         {/* <Toaster /> */}
-        <MainView children={children}/>
+        {/* <MainView children={children}/> */}
+        {children}
+      
         {/* </Providers> */}
       </body>
     </html>

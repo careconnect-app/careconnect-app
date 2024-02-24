@@ -50,8 +50,8 @@ const Notice = () => {
         </div>
       </div>
       <div className="container-list">
-        {data.map((item) => (
-          <NoticeCard {...item} />
+        {data.map((item,i) => (
+          <NoticeCard {...item} key={i}/>
         ))}
       </div>
     </div>

@@ -44,8 +44,8 @@ const OverviewCards = () => {
         </div>
       </div>
       <div className="cards-container-list">
-        {data.map((item) => (
-          <DetailCard {...item} />
+        {data.map((item,i) => (
+          <DetailCard {...item} key={i} />
         ))}
       </div>
     </div>

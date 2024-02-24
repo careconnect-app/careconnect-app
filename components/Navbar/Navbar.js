@@ -62,6 +62,7 @@ const NavbarMain = () => {
                   }
                   width={40}
                   height={40}
+                  alt=""
                 />
               </div>
               <div className="user-details">

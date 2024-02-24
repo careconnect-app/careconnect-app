@@ -8,11 +8,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif; 
-
+  font-family: "Montserrat", sans-serif;
 }
 body {
-  font-family: "Montserrat", sans-serif; 
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -28,43 +27,41 @@ a {
   background-color: #cecedb;
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
-.full-page-container{
+.full-page-container {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
-.main-page-container{
+.main-page-container {
   display: flex;
-
 }
 .side-menu-container {
   width: 250px;
- 
-
 }
-.main-content-container{
+.main-content-container {
   flex-grow: 1;
   // overflow-y: auto;
 }
 .collapsed .side-menu-container {
   width: 100px;
 }
-.collapsed .navbar-search-container{
+.collapsed .navbar-search-container {
   width: 50% !important;
 }
-.main-content{
+.main-content {
   background-color: #f7f7f7;
   height: 100vh;
-    overflow-y: auto;
-
-  
-;}
+  overflow-y: auto;
+}
 // .expanded .main-content-container {
-//   width: calc(100% - 250px); 
+//   width: calc(100% - 250px);
 // }
 @import "@/styles/base/colors.scss";
 @import "@/styles/sidebar.scss";
 @import "@/styles/navbar.scss";
 @import "@/styles/footer.scss";
+@import "@/styles/spinner.scss";
+@import "@/styles/home.scss";
+
 
 @import "@/styles/cards.scss";
 @import "@/styles/notice.scss";
