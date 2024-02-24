@@ -1,0 +1,97 @@
+.dashboard-overview-cards-section {
+    // flex: 30%;
+    .heading-calender-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 20px;
+      .heading {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .calender-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        .title {
+          color: #282c3f;
+          font-weight: 600;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .cards-container-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 0px;
+      .card {
+        // width: 240px;
+        // width: 200px;
+        width: 20%;
+        height: 80px;
+        // background: #fcf9ef;
+        background: $white;
+        border-radius: 5px;
+        // outline: 1px solid #e9e9eb;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        .card-image {
+          background-color: #fff;
+          border-radius: 50px;
+          padding: 0;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          cursor: pointer;
+          color: #282c3f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        .card-content {
+          .sub-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .title {
+              color: #797974;
+              font-weight: 700;
+              font-size: 14px;
+            }
+            .datas {
+              display: flex;
+              gap: 10px;
+              .value {
+                color: #282c3f;
+                font-weight: 700;
+                font-size: 16px;
+              }
+              .percent {
+                display: flex;
+                align-items: center;
+                svg {
+                  fill: rgb(10, 207, 10);
+                }
+                b {
+                  color: rgb(10, 207, 10);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

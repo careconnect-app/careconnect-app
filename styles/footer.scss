@@ -1,0 +1,14 @@
+.footer-container{
+    width: 100%;
+    height: 70px;
+    background-color:$sidebar-text-active-color;
+    color: $accent-color;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    b{
+        color: $sidebar-text-color;
+    }
+}
