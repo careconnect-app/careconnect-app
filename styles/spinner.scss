@@ -1,6 +1,6 @@
 $spinner: 90px;
 
-.auth {
+.spin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ $spinner: 90px;
     margin-top: 30px;
 }
 
-.auth-spinner {
+.spinner {
     margin-bottom: 30px;
 
     svg {

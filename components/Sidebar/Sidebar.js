@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 // import { useRouter } from 'next/navigation'
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -11,15 +11,13 @@ import { IoIosGitBranch } from "react-icons/io";
 import { GiMedicines } from "react-icons/gi";
 import { FaRegBuilding } from "react-icons/fa";
 import { BsArrowsCollapseVertical } from "react-icons/bs";
-import {  IoChevronDown } from "react-icons/io5";
+import { IoChevronDown } from "react-icons/io5";
 import { TbReportAnalytics } from "react-icons/tb";
-
-
 
 import { FiLogOut, FiSettings } from "react-icons/fi";
 // import { sideBarData } from "@/public/static/sidebarData";
 
-const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
+const Sidebar = () => {
   const router = usePathname();
   const sideBarData = [
     {
@@ -85,9 +83,22 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
       iconurl: <FiLogOut />,
     },
   ];
-
   const isActiveItem = (item) => router?.includes(item.toLowerCase());
 
+  const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarCollapsed(!isSidebarCollapsed);
+  };
+  useEffect(() => {
+    const element=document.querySelector(".overall-page-container")
+    if(element && isSidebarCollapsed){
+      element.classList.add("collapsed")
+    }else{
+      element.classList.remove("collapsed")
+ 
+    }
+   
+  }, [isSidebarCollapsed]);
   return (
     <div className={`${isSidebarCollapsed ? "collapsed" : ""}`}>
       <div className="logo-full-container">
@@ -121,15 +132,12 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
                   {!isSidebarCollapsed && (
                     <span className="list-text">{item?.name}</span>
                   )}
-                  {
-                  item?.subMenu?.length > 0 && (
+                  {item?.subMenu?.length > 0 && (
                     <div className="sidenav-arrow">
-                      <IoChevronDown/>
+                      <IoChevronDown />
                     </div>
-                  )
-                }
+                  )}
                 </li>
-                
               </Link>
             );
           })}

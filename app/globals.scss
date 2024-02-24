@@ -27,17 +27,13 @@ a {
   background-color: #cecedb;
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
-.full-page-container {
-  display: flex;
-  flex-direction: column;
-}
-.main-page-container {
+.overall-page-container {
   display: flex;
 }
 .side-menu-container {
   width: 250px;
 }
-.main-content-container {
+.main-content-right {
   flex-grow: 1;
   // overflow-y: auto;
 }
@@ -52,9 +48,7 @@ a {
   height: 100vh;
   overflow-y: auto;
 }
-// .expanded .main-content-container {
-//   width: calc(100% - 250px);
-// }
+
 @import "@/styles/base/colors.scss";
 @import "@/styles/sidebar.scss";
 @import "@/styles/navbar.scss";
